@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %} 
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Gönderi Ekle</legend>
+                
+                
+                {{ form.media }}
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <p>etiketler alanına konumunuzu girin. <a  href="#" title="veri tabanına kayıt ederken farklı isimlerde girdim sonradan düzeltmeside uzun sürüyordu -hata fln veriyor bazı yerlerde-üşendim düzeltmeye bende. böyle daha kolay. title ve content in ne olduğunu çözersiniz herhalde.">*</a></p>
+                
+
+                <button class="btn btn-outline-info" type="submit">Paylaş</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+
+<!-- this one is used for create and update templates -->

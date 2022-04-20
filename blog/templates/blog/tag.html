@@ -1,0 +1,53 @@
+{% extends "blog/base.html" %}
+
+{% block content%}
+
+	<h1>taggy-user</h1>
+	<h1>{{ view.kwargs.tags}}</h1>
+	
+	{% for post in posts %}
+		<article class="media content-section">
+		  <img class='rounded-circle article-img' src="{{ post.author.profile.image.url }}">	
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+		      <small class="text-muted">{{ post.date_posted}}</small>
+		      
+		      <br/>
+		      <strong>konum: {{ post.konum }}</strong>
+		      <!--konum:<strong> {{post.tags}} </strong></a>-->
+		     
+		      
+		    </div>
+		    <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+		    <p class="article-content">{{ post.content }}</p>
+		    <div>
+			    <form action="{% url 'like_post' post.pk%}"
+			    method="POST">
+			    	{% csrf_token %}
+			    	<button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Beğen</button> 
+				</form>
+				<hr>
+			    <h5>yorumlar...</h5>
+			    {% if not post.comments.all %}
+			    	henüz yorum yok...<a href="#">
+			    	ekle</a>
+			    {% else %}
+			    	{% for comment in post.comments.all %}
+			    		<strong>
+				    		{{ comment.name }} 
+				    		<!-- {{ comment.date_posted}} -->
+			    		</strong>
+			    		<br/>
+			    		<small>{{ comment.body }}</small>
+			    		<br/>
+			    	{% endfor %}
+			    {% endif %}
+			    
+		    </div>
+		  </div>
+		</article>
+
+	{% endfor %}
+
+{% endblock content %}

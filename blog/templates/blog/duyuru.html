@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+
+{% block content%}
+
+
+<!--
+		{% if request.user.is_authenticated and request.user.is_admin %}
+	<form method="post">{% csrf_token %}
+	    {{ form.as_p }}
+	    <input type="submit" value="Update">
+	</form>
+	{% else %}
+	<p>Display data</p>
+	{% endif %}
+
+-->
+	<legend>Duyurular</legend>
+	<hr>
+	<h4>Final ve Bütünleme Sınavları Hakkında Senato Kararı</h4>
+	<p>
+		13.01.2022 tarihli ve 321/2 sayılı Üniversitemiz Senato Toplantısında; 2021-2022 Eğitim-Öğretim Yılı Güz Yarıyılında Covid-19 pozitif veya temaslı olması nedeniyle final sınavına giremeyen ve bütünleme sınavı sonucunda başarısız olanlar ile aynı nedenle bütünleme sınavlarına giremeyen öğrencilere belgeleriyle birlikte kayıtlı oldukları akademik birimlere başvurmaları halinde 04-14 Şubat 2022 tarihleri arasında bir mazeret sınav hakkı verilmesine karar verilmiştir. Öğrencilerimize duyurulur.
+	</p>
+	<hr>
+	<h4>Bütünleme Sınavları Hakkında Senato Kararı</h4>
+	<p>
+		26.01.2022 tarihli ve 323/2 sayılı Üniversitemiz Senato Toplantısında; ilgili Valilikler ve resmi kurumlar tarafından ülke genelindeki hava muhalefeti nedeniyle alınan ulaşım kısıtlaması kararlarına istinaden 2021-2022 Eğitim-Öğretim Yılı Güz Yarıyılında Üniversitemizdeki bütünleme sınavlarına giremeyen ve ilgili kurumların kararlarını, toplu taşıma biletlerini/ulaşımla ilgili belgelerini akademik birimlerine teslim eden öğrenciler için 04-14 Şubat 2022 tarihleri arasında mazeret sınavları yapılmasına karar verilmiştir.
+		Öğrencilerimize duyurulur.
+	</p>
+
+
+{% endblock content %}
+
+

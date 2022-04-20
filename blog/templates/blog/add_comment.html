@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %} 
+{% block title %} comments on blogpost{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+
+            <h1>yorum ekle</h1>
+
+            <br>
+
+
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">yorum ekle</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+
+<!-- this one is used for create and update templates -->
