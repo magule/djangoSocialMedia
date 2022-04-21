@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'django_alpha.wsgi.application'
 
 
 # Data e
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases 
 
 DATABASES = {
     'default': {
