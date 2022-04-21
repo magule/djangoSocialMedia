@@ -1,1 +1,1 @@
-web: gunicorn django_alpha.wsgi
+web: gunicorn django_themis.wsgi
