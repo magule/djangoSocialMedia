@@ -11,6 +11,7 @@
 		    <div class="article-metadata">
 		      <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
 		      <small class="text-muted ml-12">{{ post.date_posted}}</small>
+		      <small class="text-muted">---> {{ post.mood }}</small>
 
 		      <br>
 

@@ -104,6 +104,8 @@ class PostListView(ListView):
 	context_object_name = 'posts'
 	ordering = ['-date_posted']
 	paginate_by = 99
+
+
 """
 
 def filter(request):
@@ -213,7 +215,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView): #inhertttnig from createview
 	model = Post
-	fields = ['title', 'content', 'tags']  ##bunları models dan çekiyor direk.
+	fields = ['title', 'content', 'tags', 'mood']  ##bunları models dan çekiyor direk.
 	success_url = '/'
 
 

@@ -38,15 +38,21 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField()
+    content = models.TextField(default="")
     #content = RichTextField(blank=True, null=True )
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)  #if is deleted than delete their posts 
     location = models.CharField(max_length=100, default="")
     tags = TaggableManager()
     likes = models.ManyToManyField(User, related_name='blog_posts')
+    #this is a new one add to models 
+    mood = models.CharField(max_length=20, default="")
+
+
+
     #categories = models.ManyToManyField('Category')
     #konum = models.CharField(max_length=100, default="")
+
 
 
 
@@ -73,7 +79,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.post.title, self.name)
-
 
 
 #--------------------------------------------------------------------------------------------------------------------------------------

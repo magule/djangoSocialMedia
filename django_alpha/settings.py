@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'taggit',
     'ckeditor',
+    "crispy_bootstrap4",
 
 ]
 

@@ -12,6 +12,7 @@
 
               {% endfor %}
 		      <small class="text-muted">{{ object.date_posted}}</small>
+
 		      {% if object.author == user %}   <!-- current logged in user-->
 		      	<div>
 		      		<a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Güncelle</a>
