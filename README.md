@@ -1,5 +1,7 @@
-# Themis Social Media
+# Themis Social Media - https://nygu.herokuapp.com/
 Django Social Media App
+
+https://nygu.herokuapp.com/
 
 Homepage/Anasayfa
 <img width="1439" alt="Ekran Resmi 2023-03-05 12 27 44" src="https://user-images.githubusercontent.com/47292808/222952530-d42d86c4-6ac5-4171-ad61-4bb9332cea77.png">
