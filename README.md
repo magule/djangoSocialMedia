@@ -1,5 +1,5 @@
 # Themis - Django Social Media 
-# https://nygu.herokuapp.com/
+# https://themis-beta.herokuapp.com/
 
 Homepage/Anasayfa
 
